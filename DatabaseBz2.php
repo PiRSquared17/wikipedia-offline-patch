@@ -107,6 +107,14 @@ class DatabaseBz2 extends DatabaseBase
 		}
 	}
 
+	function getType() {
+		return 'bz2';
+	}
+
+	function doQuery( $sql ) {
+		return true;
+	}
+
 	function fetchRow( $res ) {
 		return null;
 	}
