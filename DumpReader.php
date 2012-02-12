@@ -78,7 +78,7 @@ class DumpReader
 
 		global $wgOfflineWikiPath;
 		try {
-			$indexer = new XapianFulltextIndex("$wgOfflineWikiPath/db");
+			$indexer = new FulltextIndex("$wgOfflineWikiPath/db");
 			return $indexer->search($title);
 		} catch (Exception $e) {
 			wfDebug(__METHOD__.':'.$e->getMessage());
